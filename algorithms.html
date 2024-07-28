@@ -1,0 +1,38 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <h3>Binary search</h3>
+    <code> 
+        
+        my_list = [1,3,5,7,9]
+
+        def binary_search(arr, item):
+            low = 0
+            high = len(arr)-1
+
+            while low <= high:
+                mid = (low + high) // 2 # rounded down if mid is an odd number
+                guess = arr[mid]
+            if guess == item:
+                return mid
+            # if guess is too high, update high
+            elif guess > item:
+                high = mid - 1
+            else:
+                low = mid + 1
+            return None
+        
+        print(binary_search(my_list, 3)) # => 1      3 is at index 1
+        print(binary_search(my_list, -1)) # => None  the item was not found
+    </code>
+
+
+
+    </p>
+</body>
+</html>
