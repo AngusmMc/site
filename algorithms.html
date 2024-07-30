@@ -8,9 +8,9 @@
 <body>
     <p><a href="/index.html">home</a>
     <h3>Binary search</h3>
-    <div class="box">
+    <div class="binary_search">
         <pre>
-            <code> 
+        <code> 
                 # our array that we want to search through
                 my_list = [1,3,5,7,9]
                 
@@ -35,8 +35,35 @@
                 
                 print(binary_search(my_list, 3)) # => 1      3 is at index 1
                 print(binary_search(my_list, -1)) # => None  the item was not found
-                </pre>
             </code>
+        </pre>
+        </div>
+        <h3>Selection Sort</h3>
+    <div class="selection_sort">
+        <pre>
+            <code> 
+            # We first need a function to find the smallest element in an array
+
+            def findSmallest(arr):
+            smallest = arr[0]
+            smallest_index = 0
+            for i in range(1, len(arr)):
+                if arr[i] < smallest:
+                smallest = arr[i]
+                smallest_index = i
+
+            # Now we can write the selection sort algorithm
+
+            def selectionSort(arr):
+            newArr = []
+            copiedArr = list(arr) # copy array before mutating
+            for i in range(len(copiedArr)):
+                smallest = findSmallest(copiedArr)
+                newArr.append(copiedArr.pop(smallest))
+            return newArr
+
+            </code>
+        </pre>
         </div>
     </body>
 </html>
