@@ -15,6 +15,7 @@
             padding: 10px;
         }
     </style>
+    <script src="https://www.google.com/recaptcha/api.js" async defer></script>
 </head>
 <body>
     <h1>Hi I'm Angus</h1>
@@ -27,19 +28,24 @@
     <!-- Footer -->
     <footer>
         <h3>You can email me here</h3>
-        <form
-action="https://formspree.io/f/xblrgwld"
-method="POST"
->
-<label>
-  Your email:
-  <input type="email" name="email">
-</label>
-<label>
-  Your message:
-  <textarea name="message"></textarea>
-</label>
-<button type="submit">Send</button>
+        <form action="https://formspree.io/f/xblrgwld" method="POST">
+            <label>
+                Your email:
+                <input type="email" name="email">
+            </label>
+            <label>
+            Your message:
+            <textarea name="message"></textarea>
+            </label>
+            <!--Honeypot-->
+            <div style="display:none;">
+                <label>Leave this field blank:</label>
+                <input type="text" name="honeypot">
+            </div>
+            <!--reCAPCTCHA-->
+            <div class="g-recaptcha" data-sitekey="6Lce2RwqAAAAAKgDIaVxDfEVG1cst1P8rCpZ5gij"</div>
+            <button type="submit">Send</button>
+        </form>
     </footer>
 </body>
 </html>
