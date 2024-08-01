@@ -1,8 +1,10 @@
 <!DOCTYPE html>
 <html>
 <head>
+    <head>
+    <script src="https://www.google.com/recaptcha/enterprise.js?render=6LdShRwqAAAAAKu3o1YBKRDS6prYW3G9NAosrw5c"></script>
+        <!-- Your code -->
     <title>Angus M</title>
-    <script src="https://www.google.com/recaptcha/api.js" async defer></script>
     <style>
         /* CSS for the footer */
         footer {
@@ -28,18 +30,12 @@
     <!-- Footer -->
     <footer>
         <h3>You can email me here</h3>
-        <form action="https://formspree.io/f/xblrgwld" method="POST">
-            <label>
-                Your email:
-                <input type="email" name="email">
-            </label>
-            <label>
-            Your message:
-            <textarea name="message"></textarea>
-            <button type="submit">Send</button>
-            </label>
-            </div>
-        </form>
+        <form action="https://formspree.io/f/{form_id}" method="POST">
+            <input type="email" name="email" placeholder="email@example.com" />
+            <div class="g-recaptcha" data-sitekey="6LdShRwqAAAAAKu3o1YBKRDS6prYW3G9NAosrw5c"></div> <!-- replace with your recaptcha SITE key not secret key -->
+            <br/>
+            <input type="submit" value="Submit">
+          </form>
     </footer>
 </body>
 </html>
