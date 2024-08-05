@@ -1,0 +1,70 @@
+/* styles.css */
+
+body {
+    line-height: 1.6;
+    margin: 0;
+    padding: 0;
+}
+
+pre code {
+    background-color: #f4f4f4;
+    border: 1px solid #ccc;
+    display: block;
+    padding: 20px;
+    overflow-x: auto;
+    white-space: pre-wrap; 
+    word-wrap: break-word; 
+}
+
+.container {
+    width: 90%;
+    margin: auto;
+    overflow: hidden;
+}
+
+.content-wrapper {
+    display: flex;
+    align-items: flex-start; /* Align items to the top */
+}
+
+.profile-pic {
+    margin-left: 20px; /* Space between image and content */
+    width: 300px; /* Adjust width as needed */
+    height: auto; /* Maintain aspect ratio */
+}
+
+.text-content {
+    flex: 1; /* Take up remaining space */
+}
+
+/* CSS for the footer */
+footer {
+    position: fixed;
+    left: 0;
+    bottom: 0;
+    width: 100%;
+    color: black;
+    text-align: center;
+    padding: 10px;
+}
+
+
+input, textarea {
+    width: 200px; /* Adjust the width as needed */
+    padding: 8px;
+    border: 1px solid #ccc;
+    border-radius: 4px;
+}
+
+button {
+    background-color: #4CAF50;
+    color: white;
+    padding: 10px 20px;
+    border: none;
+    border-radius: 4px;
+    cursor: pointer;
+}
+
+button:hover {
+    background-color: #45a049;
+}
